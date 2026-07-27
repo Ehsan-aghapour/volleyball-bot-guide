@@ -1,0 +1,318 @@
+/* ---------------------------------------------------------------
+   استایل مشترک همه‌ی صفحه‌ها
+   راست‌به‌چپ، خوانا، بدون هیچ وابستگی به اینترنت
+   --------------------------------------------------------------- */
+
+:root {
+  --bg:        #ffffff;
+  --fg:        #17181c;
+  --muted:     #6b7280;
+  --line:      #e6e8ec;
+  --card:      #f7f8fa;
+  --accent:    #2563eb;
+  --accent-bg: #eff4ff;
+  --ok:        #15803d;
+  --ok-bg:     #f0fdf4;
+  --ok-line:   #bbf7d0;
+  --warn:      #b45309;
+  --warn-bg:   #fffbeb;
+  --warn-line: #fde68a;
+  --code-bg:   #1e293b;
+  --code-fg:   #e2e8f0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:        #14161a;
+    --fg:        #e8eaed;
+    --muted:     #9aa1ac;
+    --line:      #2a2e35;
+    --card:      #1b1e24;
+    --accent:    #7aa2f7;
+    --accent-bg: #1a2233;
+    --ok:        #6ee7a8;
+    --ok-bg:     #14251c;
+    --ok-line:   #24503a;
+    --warn:      #fbbf24;
+    --warn-bg:   #2a2113;
+    --warn-line: #4d3a15;
+    --code-bg:   #0f1319;
+    --code-fg:   #cbd5e1;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  direction: rtl;
+  text-align: right;
+  font-family: Tahoma, "Iran Sans", "Vazirmatn", "Segoe UI", system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 2;
+  color: var(--fg);
+  background: var(--bg);
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 7rem;
+}
+
+/* ---------- نوار پیشرفت بالای صفحه ---------- */
+
+.progress-bar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  margin: -1.5rem -1.25rem 2rem;
+  padding: 0.85rem 1.25rem;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  font-size: 0.95rem;
+}
+.progress-bar .track {
+  flex: 1;
+  height: 10px;
+  border-radius: 99px;
+  background: var(--line);
+  overflow: hidden;
+}
+.progress-bar .fill {
+  height: 100%;
+  width: 0;
+  border-radius: 99px;
+  background: var(--ok);
+  transition: width 0.35s ease;
+}
+.progress-bar .count { color: var(--muted); white-space: nowrap; }
+
+/* ---------- عنوان‌ها ---------- */
+
+h1 {
+  font-size: 1.9rem;
+  line-height: 1.6;
+  margin: 0 0 1.5rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 3px solid var(--accent);
+}
+h2 {
+  font-size: 1.45rem;
+  line-height: 1.7;
+  margin: 3rem 0 1rem;
+}
+h3 {
+  font-size: 1.12rem;
+  line-height: 1.8;
+  margin: 2rem 0 0.6rem;
+  color: var(--muted);
+}
+p { margin: 0.8rem 0; }
+hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0; }
+
+/* ---------- جعبه‌ی هدف ---------- */
+
+.target {
+  background: var(--accent-bg);
+  border: 1px solid var(--accent);
+  border-radius: 14px;
+  padding: 1.3rem 1.4rem;
+  margin: 1.5rem 0;
+}
+.target .label {
+  font-size: 0.92rem;
+  color: var(--accent);
+  margin-bottom: 0.3rem;
+}
+.target .text {
+  font-size: 1.28rem;
+  font-weight: bold;
+  line-height: 1.85;
+}
+
+/* ---------- کارت روز ---------- */
+
+.day {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1.5rem 1.6rem;
+  margin: 2.5rem 0;
+  background: var(--card);
+  transition: background 0.3s, border-color 0.3s;
+}
+.day.done {
+  background: var(--ok-bg);
+  border-color: var(--ok-line);
+}
+.day h2 { margin-top: 0; }
+.day .done-badge {
+  display: none;
+  color: var(--ok);
+  font-weight: bold;
+  margin-top: 1rem;
+}
+.day.done .done-badge { display: block; }
+
+/* ---------- چک‌لیست ---------- */
+
+.checklist { list-style: none; margin: 1rem 0; padding: 0; }
+.checklist li { margin: 0.35rem 0; }
+
+.checklist label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.6rem 0.7rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.checklist label:hover { background: rgba(127, 127, 127, 0.09); }
+
+.checklist input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  flex: 0 0 auto;
+  width: 1.45rem;
+  height: 1.45rem;
+  margin-top: 0.35rem;
+  border: 2px solid var(--muted);
+  border-radius: 6px;
+  background: var(--bg);
+  cursor: pointer;
+  position: relative;
+}
+.checklist input[type="checkbox"]:checked {
+  background: var(--ok);
+  border-color: var(--ok);
+}
+.checklist input[type="checkbox"]:checked::after {
+  content: "✓";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.checklist input:checked + span { color: var(--muted); text-decoration: line-through; }
+
+/* ---------- بلوک انگلیسی: همیشه چپ‌به‌راست ---------- */
+
+pre.cmd {
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: isolate;
+  font-family: "Cascadia Mono", Consolas, "DejaVu Sans Mono", monospace;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  background: var(--code-bg);
+  color: var(--code-fg);
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+  margin: 0.9rem 0;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+/* ---------- متن فارسی برای کپی کردن در کلود ---------- */
+
+.prompt {
+  direction: rtl;
+  text-align: right;
+  background: var(--bg);
+  border: 2px dashed var(--accent);
+  border-radius: 12px;
+  padding: 1.1rem 1.2rem;
+  margin: 0.9rem 0;
+  line-height: 1.95;
+  white-space: pre-wrap;
+}
+.prompt .tag {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- جعبه‌های نکته ---------- */
+
+.note, .warn {
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  margin: 1.3rem 0;
+  border-inline-start: 5px solid;
+}
+.note { background: var(--card);     border-color: var(--muted); }
+.warn { background: var(--warn-bg);  border-color: var(--warn); }
+.note p:first-child, .warn p:first-child { margin-top: 0; }
+.note p:last-child,  .warn p:last-child  { margin-bottom: 0; }
+
+/* ---------- چرا این کار لازم است ---------- */
+
+.why {
+  background: var(--accent-bg);
+  border-inline-start: 5px solid var(--accent);
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  margin: 1.2rem 0;
+}
+.why .tag {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--accent);
+  margin-bottom: 0.2rem;
+}
+.why p:last-child { margin-bottom: 0; }
+
+/* ---------- ناوبری ---------- */
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin: 2.5rem 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+.nav a {
+  flex: 1 1 12rem;
+  display: block;
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--card);
+  color: var(--fg);
+  text-decoration: none;
+  font-weight: bold;
+  transition: border-color 0.15s, background 0.15s;
+}
+.nav a:hover { border-color: var(--accent); background: var(--accent-bg); }
+.nav a .sub { display: block; font-weight: normal; color: var(--muted); font-size: 0.92rem; }
+
+/* ---------- گزینه‌های پروژه ---------- */
+
+.option {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.3rem 1.5rem;
+  margin: 1.5rem 0;
+  background: var(--card);
+}
+.option h2 { margin: 0 0 0.5rem; font-size: 1.3rem; }
+
+.reset {
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-family: inherit;
+}

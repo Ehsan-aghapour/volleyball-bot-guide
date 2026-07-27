@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>فهرست کارها</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="progress-bar">
+  <span>مرحله‌های تحویل‌شده</span>
+  <span class="track"><span class="fill"></span></span>
+  <span class="count">۰ از ۵</span>
+</div>
+
+<h1>فهرست کارها</h1>
+
+<div class="target">
+  <div class="label">تحویل این هفته</div>
+  <div class="text">ربات جلسه‌ی بعد را اعلام کند و فهرست حاضران را نگه دارد.</div>
+</div>
+
+<p>
+یعنی مرحله‌های یک تا چهار. مرحله‌ی پنج بعد از آن‌هاست.
+</p>
+
+<ul class="checklist" data-track>
+  <li><label><input type="checkbox"><span><b>مرحله ۱</b> — راه‌اندازی محیط کار و اسکلت ربات</span></label></li>
+  <li><label><input type="checkbox"><span><b>مرحله ۲</b> — معرفی ربات و فهرست دستورها</span></label></li>
+  <li><label><input type="checkbox"><span><b>مرحله ۳</b> — نمایش جلسه‌ی بعد</span></label></li>
+  <li><label><input type="checkbox"><span><b>مرحله ۴</b> — اعلام حضور و شمارش نفرات</span></label></li>
+  <li><label><input type="checkbox"><span><b>مرحله ۵</b> — آزمایش با کاربر و ثبت ایرادها</span></label></li>
+</ul>
+
+<hr>
+
+<!-- ================= مرحله ۱ ================= -->
+<div class="day">
+<h2>مرحله ۱ — راه‌اندازی محیط کار و اسکلت ربات</h2>
+
+<div class="why"><span class="tag">چرا لازم است</span>
+<p>
+تا یک ربات زنده روی تلگرام نداشته باشیم، هیچ‌کدام از قابلیت‌های بعدی
+قابل ساخت و قابل آزمایش نیست.
+</p>
+</div>
+
+<p>جزئیات این مرحله صفحه‌ی جداگانه دارد:</p>
+
+<div class="nav" style="margin-top:0.5rem">
+  <a href="stage1.html">مرحله‌ی اول<span class="sub">قدم‌به‌قدم، با متن‌هایی که باید کپی کنی</span></a>
+</div>
+
+<h3>شرط تحویل</h3>
+<ul class="checklist">
+  <li><label><input type="checkbox"><span>ربات در تلگرام به یک دستور جواب می‌دهد</span></label></li>
+  <li><label><input type="checkbox"><span>بلدم خودم ربات را اجرا و متوقف کنم</span></label></li>
+  <li><label><input type="checkbox"><span>متن جواب را خودم عوض کرده‌ام و تغییر را در تلگرام دیده‌ام</span></label></li>
+  <li><label><input type="checkbox"><span>تصویر خروجی ثبت شده</span></label></li>
+</ul>
+
+<p class="done-badge">تحویل شد</p>
+</div>
+
+<!-- ================= مرحله ۲ ================= -->
+<div class="day">
+<h2>مرحله ۲ — معرفی ربات و فهرست دستورها</h2>
+
+<div class="why"><span class="tag">چرا لازم است</span>
+<p>
+هر کسی که بعداً به گروه اضافه می‌شود، اولین برخوردش با رباتی است که
+نمی‌داند چه کار می‌کند. اگر خودِ ربات این را توضیح ندهد،
+هر بار یک نفر باید شفاهی توضیح بدهد.
+</p>
+</div>
+
+<h3>شرط تحویل</h3>
+<ul class="checklist">
+  <li><label><input type="checkbox"><span>دستور شروع، یک معرفی کوتاه از کار ربات می‌دهد</span></label></li>
+  <li><label><input type="checkbox"><span>دستور راهنما، فهرست کارهایی که ربات بلد است را می‌دهد</span></label></li>
+  <li><label><input type="checkbox"><span>اگر کسی دستور ناشناخته بزند، ربات او را به فهرست دستورها ارجاع می‌دهد</span></label></li>
+  <li><label><input type="checkbox"><span>متن هر سه را خودم نوشته‌ام</span></label></li>
+  <li><label><input type="checkbox"><span>تصویر خروجی ثبت شده</span></label></li>
+</ul>
+
+<h3>دستورهای این مرحله</h3>
+<pre class="cmd">/start
+/help</pre>
+
+<div class="note">
+<p><b>یادداشت فنی</b></p>
+<p>
+متن‌ها را خودت در فایل عوض کن، نه کلود. از کلود فقط جای متن را بپرس:
+</p>
+<div class="prompt"><span class="tag">برای کپی</span>متن پیام راهنما در کدام فایل و کدام خط است؟
+فقط جایش را بگو، خودم عوضش می‌کنم.</div>
+<p>
+دلیلش این است که از این به بعد هر تغییر متنی که کاربر می‌خواهد،
+بدون معطلی و بدون واسطه انجام می‌شود. تغییر متن هم برگشت‌پذیر است؛
+اگر خروجی خراب شد با یک دستور به حالت قبل برمی‌گردد.
+</p>
+</div>
+
+<p class="done-badge">تحویل شد</p>
+</div>
+
+<!-- ================= مرحله ۳ ================= -->
+<div class="day">
+<h2>مرحله ۳ — نمایش جلسه‌ی بعد</h2>
+
+<div class="why"><span class="tag">چرا لازم است</span>
+<p>
+الان هر هفته یک نفر باید تاریخ و ساعت و مکان را در گروه تکرار کند،
+و باز هم چند نفر می‌پرسند «کجا؟» یا «ساعت چند؟».
+این اولین کاری است که ربات واقعاً از دوش کسی برمی‌دارد.
+</p>
+</div>
+
+<h3>شرط تحویل</h3>
+<ul class="checklist">
+  <li><label><input type="checkbox"><span>یک دستور، تاریخ و ساعت و مکان جلسه‌ی بعد را می‌دهد</span></label></li>
+  <li><label><input type="checkbox"><span>خروجی خوانا است؛ تاریخ شمسی و ساعت مشخص</span></label></li>
+  <li><label><input type="checkbox"><span>تصویر خروجی ثبت شده</span></label></li>
+</ul>
+
+<h3>دستور این مرحله</h3>
+<pre class="cmd">/next</pre>
+
+<div class="note">
+<p><b>یادداشت فنی</b></p>
+<p>
+در این مرحله اطلاعات جلسه ثابت و داخل کد نوشته می‌شود. این عمدی است:
+اول مسیر رسیدن پیام درست می‌شود، بعد منبع اطلاعات به آن وصل می‌شود.
+اگر بعداً منبع اطلاعات مشکل داشت، می‌دانی مشکل از کدام قسمت نیست.
+</p>
+</div>
+
+<p class="done-badge">تحویل شد</p>
+</div>
+
+<!-- ================= مرحله ۴ ================= -->
+<div class="day">
+<h2>مرحله ۴ — اعلام حضور و شمارش نفرات</h2>
+
+<div class="why"><span class="tag">چرا لازم است</span>
+<p>
+این هسته‌ی کار است. الان حضور با پیام‌های پراکنده در گروه اعلام می‌شود
+و شمردنش دستی است؛ کسی باید پیام‌ها را مرور کند و اسم‌ها را بشمارد،
+و هر بار هم اشتباه پیش می‌آید.
+</p>
+</div>
+
+<h3>شرط تحویل</h3>
+<ul class="checklist">
+  <li><label><input type="checkbox"><span>زیر پیام جلسه، دو دکمه هست: هستم و نیستم</span></label></li>
+  <li><label><input type="checkbox"><span>با زدن دکمه، اسم کاربر به فهرست اضافه یا از آن حذف می‌شود</span></label></li>
+  <li><label><input type="checkbox"><span>یک دستور، فهرست حاضران و تعدادشان را نشان می‌دهد</span></label></li>
+  <li><label><input type="checkbox"><span>اگر کسی دو بار دکمه را بزند، اسمش دو بار ثبت نمی‌شود</span></label></li>
+  <li><label><input type="checkbox"><span>تصویر خروجی ثبت شده</span></label></li>
+</ul>
+
+<h3>دستور این مرحله</h3>
+<pre class="cmd">/list</pre>
+
+<div class="note">
+<p><b>یادداشت فنی</b></p>
+<p>
+فهرست در این مرحله فقط در حافظه است و با متوقف شدن ربات پاک می‌شود.
+ماندگار کردنش مرحله‌ی جداگانه‌ای است و الان جزو این تحویل نیست.
+</p>
+</div>
+
+<p class="done-badge">تحویل شد</p>
+</div>
+
+<!-- ================= مرحله ۵ ================= -->
+<div class="day">
+<h2>مرحله ۵ — آزمایش با کاربر و ثبت ایرادها</h2>
+
+<div class="why"><span class="tag">چرا لازم است</span>
+<p>
+کسی که یک چیز را ساخته، ایرادهایش را نمی‌بیند؛ چون می‌داند باید چطور
+با آن کار کرد. کاربری که هیچ‌چیز نمی‌داند، در پنج دقیقه چیزهایی پیدا می‌کند
+که سازنده در یک هفته پیدا نمی‌کند.
+</p>
+</div>
+
+<h3>شرط تحویل</h3>
+<ul class="checklist">
+  <li><label><input type="checkbox"><span>دو نفر که در ساخت ربات دخالت نداشته‌اند آن را امتحان کرده‌اند</span></label></li>
+  <li><label><input type="checkbox"><span>بدون اینکه من راهنمایی‌شان کنم، توانسته‌اند حضورشان را اعلام کنند</span></label></li>
+  <li><label><input type="checkbox"><span>هر جا مکث کردند یا اشتباه زدند یادداشت شده</span></label></li>
+  <li><label><input type="checkbox"><span>هر «کاش این را هم داشت» یادداشت شده</span></label></li>
+  <li><label><input type="checkbox"><span>فهرست ایرادها آماده است</span></label></li>
+</ul>
+
+<div class="note">
+<p><b>یادداشت</b></p>
+<p>
+این دو نفر عمداً از اعضای گروه والیبال نیستند. تا ربات چند مرحله‌ی دیگر
+جلو نرفته، به گروه اصلی داده نمی‌شود؛ یک ابزار نیمه‌کاره‌ای که وسط
+هماهنگی هفتگی خراب شود، بدتر از نبودنش است.
+</p>
+<p>
+فهرست ایرادهایی که از اینجا درمی‌آید، ورودی مرحله‌های بعدی است.
+از این به بعد کارها از سمت کاربر تعریف می‌شوند.
+</p>
+</div>
+
+<p class="done-badge">تحویل شد</p>
+</div>
+
+<hr>
+
+<h2>وقتی مرحله‌ای زودتر تحویل شد</h2>
+
+<p>
+مرحله‌ی بعدی در فهرست است.
+</p>
+
+<h2>وقتی کار متوقف می‌شود</h2>
+
+<p>بعد از ۲۵ دقیقه، این را به کلود بده:</p>
+<div class="prompt"><span class="tag">برای کپی</span>گیر کردم. کد نده.
+آن‌قدر از من سؤال بپرس تا بفهمی دقیقاً چه می‌خواهم.</div>
+<p>
+بعد از ۴۵ دقیقه، مرحله را متوقف اعلام کن، به احسان اطلاع بده،
+و مرحله‌ی بعدی را شروع کن. منتظر جواب نمان.
+</p>
+
+<h2>جلسه‌ی شنبه</h2>
+
+<p>
+تحویل‌های هفته را نشان می‌دهی، ایرادهای باز مرور می‌شوند،
+و مرحله‌های هفته‌ی بعد انتخاب می‌شود.
+</p>
+
+<div class="nav">
+  <a href="../index.html">صفحه‌ی اول<span class="sub">شرح پروژه و نحوه‌ی کار</span></a>
+  <a href="stage1.html">مرحله‌ی اول<span class="sub">قدم‌به‌قدم</span></a>
+</div>
+
+<button class="reset">پاک کردن تیک‌های این صفحه</button>
+
+<script src="../assets/app.js"></script>
+</body>
+</html>

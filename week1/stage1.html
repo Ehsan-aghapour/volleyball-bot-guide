@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>مرحله ۱</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="progress-bar">
+  <span>پیشرفت این مرحله</span>
+  <span class="track"><span class="fill"></span></span>
+  <span class="count">۰ از ۰</span>
+</div>
+
+<h1>مرحله ۱ — راه‌اندازی محیط کار و اسکلت ربات</h1>
+
+<div class="target">
+  <div class="label">تحویل این مرحله</div>
+  <div class="text">ربات روی تلگرام زنده باشد و به یک دستور جواب بدهد.</div>
+</div>
+
+<div class="why"><span class="tag">چرا لازم است</span>
+<p>
+تا یک ربات زنده روی تلگرام نداشته باشیم، هیچ‌کدام از قابلیت‌های بعدی
+نه قابل ساخت است و نه قابل آزمایش. بقیه‌ی کارها روی همین اسکلت سوار می‌شوند.
+</p>
+</div>
+
+<div class="note">
+<p><b>تقسیم کار در این مرحله</b></p>
+<p>
+قسمت ۱ تا ۳ نصب و پیکربندی است و احسان انجام می‌دهد.
+از قسمت ۴ به بعد کیبورد دست توست.
+اگر جایی متوقف شدی، اول از کلود بپرس.
+</p>
+</div>
+
+<hr>
+
+<h2>۱ — حساب‌ها و نصب‌ها</h2>
+
+<ul class="checklist">
+  <li><label><input type="checkbox"><span>ایمیل کاری جدید</span></label></li>
+  <li><label><input type="checkbox"><span>حساب کلود با همان ایمیل و فعال کردن اشتراک</span></label></li>
+  <li><label><input type="checkbox"><span>نصب ویرایشگر کد</span></label></li>
+  <li><label><input type="checkbox"><span>نصب پایتون</span></label></li>
+  <li><label><input type="checkbox"><span>نصب افزونه‌ی کلود در ویرایشگر و ورود با حساب خودت</span></label></li>
+</ul>
+
+<p>اسم دقیق چیزهایی که نصب می‌شوند:</p>
+<pre class="cmd">Gmail
+Claude Pro
+VS Code
+Python 3.12+
+Claude Code (VS Code extension)</pre>
+
+<hr>
+
+<h2>۲ — ساخت ربات در تلگرام</h2>
+
+<p>تلگرام برای ساختن ربات یک ربات رسمی دارد. آن را باز کن:</p>
+<pre class="cmd">@BotFather</pre>
+
+<p>این را برایش بفرست:</p>
+<pre class="cmd">/newbot</pre>
+
+<p>
+یک اسم برای ربات می‌خواهد؛ چیزی که اعضای گروه می‌بینند.
+بعد یک نام کاربری می‌خواهد که باید آخرش این کلمه باشد:
+</p>
+<pre class="cmd">bot</pre>
+
+<p>مثلاً:</p>
+<pre class="cmd">pvg_volleyball_bot</pre>
+
+<p>در آخر یک <b>توکن</b> می‌دهد؛ رشته‌ای شبیه این:</p>
+<pre class="cmd">7123456789:AAH-xxxxxxxxxxxxxxxxxxxxxxxxx</pre>
+
+<div class="warn">
+<p>
+این توکن کلید کنترل کامل ربات است. هر کسی که آن را داشته باشد
+می‌تواند از طرف ربات پیام بفرستد. جایی امن نگهش دار و در اینترنت نگذارش.
+</p>
+</div>
+
+<ul class="checklist">
+  <li><label><input type="checkbox"><span>ربات ساخته شد و توکن جایی امن ذخیره شده</span></label></li>
+</ul>
+
+<hr>
+
+<h2>۳ — پوشه‌ی پروژه</h2>
+
+<p>یک پوشه برای پروژه بساز:</p>
+<pre class="cmd">volleyball-bot</pre>
+
+<p>فایل‌هایی را که احسان داده در آن کپی کن. اسم آن پوشه این است:</p>
+<pre class="cmd">bot-starter</pre>
+
+<p>در ویرایشگر همین پوشه را باز کن:</p>
+<pre class="cmd">File → Open Folder</pre>
+
+<p>بعد پنل کلود را باز کن.</p>
+
+<ul class="checklist">
+  <li><label><input type="checkbox"><span>پوشه ساخته شد و در ویرایشگر باز است</span></label></li>
+</ul>
+
+<hr>
+
+<h2>۴ — تعریف کار برای کلود</h2>
+
+<div class="prompt"><span class="tag">برای کپی</span>می‌خواهم یک ربات تلگرام با پایتون بسازم
+برای هماهنگی جلسه‌های هفتگی یک گروه والیبال.
+
+اولین قدم فقط اسکلت است: وقتی کسی دستور شروع را می‌زند،
+ربات یک پیام کوتاه جواب بدهد.
+
+قبل از نوشتن کد:
+۱. به فارسی و ساده بگو چه قدم‌هایی لازم است.
+۲. بگو هر قدم چه کاری انجام می‌دهد.
+۳. صبر کن تا من بگویم برو.</div>
+
+<p>
+نقشه‌ای که می‌دهد را بخوان. هر جا روشن نبود، همان‌جا بپرس:
+</p>
+
+<div class="prompt"><span class="tag">برای کپی</span>قدم ۲ برایم روشن نیست.
+ساده‌تر توضیح بده، با یک مثال از چیزی که هر روز می‌بینم.</div>
+
+<p>وقتی نقشه روشن شد، بنویس: <b>برو</b></p>
+
+<ul class="checklist">
+  <li><label><input type="checkbox"><span>نقشه را خوانده‌ام و اجازه‌ی نوشتن کد را داده‌ام</span></label></li>
+</ul>
+
+<hr>
+
+<h2>۵ — اجرا</h2>
+
+<p>وقتی کد نوشته شد:</p>
+
+<div class="prompt"><span class="tag">برای کپی</span>قدم‌به‌قدم بگو چطور خودم این را اجرا کنم.
+دستورها را یکی‌یکی بده و بعد از هرکدام صبر کن.
+هر دستور را هم بگو دقیقاً چه کار می‌کند.</div>
+
+<div class="note">
+<p>
+دستورها را خودت در ترمینال تایپ کن. اجرا و متوقف کردن ربات کاری است که
+از این به بعد روزی چند بار انجام می‌دهی؛ باید دستت راه بیفتد.
+</p>
+</div>
+
+<p>اگر خطا گرفتی، اول خودت متن خطا را بخوان و حدس بزن چه می‌گوید. بعد:</p>
+
+<div class="prompt"><span class="tag">برای کپی</span>این خطا را گرفتم:
+
+[متن خطا را اینجا بچسبان]
+
+حدس من این است که [حدست].
+درست است؟ به فارسی توضیح بده.</div>
+
+<p>حالا ربات خودت را در تلگرام باز کن و این را بزن:</p>
+<pre class="cmd">/start</pre>
+
+<ul class="checklist">
+  <li><label><input type="checkbox"><span>ربات جواب داد</span></label></li>
+  <li><label><input type="checkbox"><span>بلدم خودم ربات را اجرا و متوقف کنم</span></label></li>
+</ul>
+
+<hr>
+
+<h2>۶ — اولین تغییر متن</h2>
+
+<p>
+متنی که ربات جواب می‌دهد را کلود نوشته. آن متن قرار است چیزی باشد که
+اعضای گروه می‌بینند، پس تصمیمش با توست.
+</p>
+
+<p>از کلود فقط جای متن را بپرس. نخواه خودش عوضش کند:</p>
+
+<div class="prompt"><span class="tag">برای کپی</span>متن پیامی که ربات موقع شروع می‌فرستد
+در کدام فایل و کدام خط است؟
+فقط جایش را بگو، خودم عوضش می‌کنم.</div>
+
+<p>
+فایل را باز کن، خط را پیدا کن، و متن را با چیزی که خودت مناسب می‌دانی عوض کن.
+ذخیره کن، ربات را دوباره اجرا کن، و در تلگرام ببین.
+</p>
+
+<div class="note">
+<p>
+هدف این کار این است که بدانی چیزها کجا هستند، چون از این به بعد
+هر تغییر متنی بدون واسطه انجام می‌شود. لازم نیست بقیه‌ی کد را بفهمی.
+این تغییر هم برگشت‌پذیر است؛ اگر خروجی خراب شد به حالت قبل برمی‌گردد.
+</p>
+</div>
+
+<ul class="checklist">
+  <li><label><input type="checkbox"><span>متن را خودم عوض کردم و تغییر را در تلگرام دیدم</span></label></li>
+</ul>
+
+<hr>
+
+<h2>بستن مرحله</h2>
+
+<ul class="checklist">
+  <li><label><input type="checkbox"><span>یک پوشه برای ثبت وضعیت بساز و تصویر خروجی این مرحله را در آن ذخیره کن</span></label></li>
+  <li><label><input type="checkbox"><span>در پیام‌های ذخیره‌شده‌ی تلگرام سه خط بنویس: چه تحویل شد، چه متوقف است، بعدی چیست</span></label></li>
+  <li><label><input type="checkbox"><span>ربات را به یک نفر نشان بده و ببین بدون توضیح تو می‌فهمد چه کار می‌کند</span></label></li>
+</ul>
+
+<div class="nav">
+  <a href="week1.html">فهرست کارها<span class="sub">مرحله‌های بعدی</span></a>
+  <a href="../index.html">صفحه‌ی اول<span class="sub">شرح پروژه</span></a>
+</div>
+
+<button class="reset">پاک کردن تیک‌های این صفحه</button>
+
+<script src="../assets/app.js"></script>
+</body>
+</html>
