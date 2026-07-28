@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>گرفتن فایل‌ها</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<h1>گرفتن فایل‌ها و به‌روزرسانی</h1>
+
+<p>
+دو چیز داری و کارشان فرق می‌کند:
+</p>
+
+<div class="why"><span class="tag">۱ — سایت راهنما</span>
+<p>
+همین صفحه‌ها. در مرورگر بازشان می‌کنی و همیشه آخرین نسخه‌اند.
+هیچ کاری برای به‌روز کردنشان لازم نیست؛ فقط صفحه را تازه کن.
+</p>
+</div>
+
+<div class="why"><span class="tag">۲ — پوشه‌ی فایل‌ها</span>
+<p>
+فایل‌هایی که باید روی لپ‌تاپت باشند. این‌ها را یک‌بار می‌گیری،
+و هر وقت احسان گفت به‌روز شده، با یک دستور نسخه‌ی جدید را می‌گیری.
+</p>
+</div>
+
+<hr>
+
+<h2>الان لازم است</h2>
+
+<h3>۱ — نصب گیت</h3>
+
+<p>گیت ابزاری است که با آن فایل‌ها را می‌گیری و به‌روز می‌کنی. از این آدرس نصبش کن:</p>
+
+<pre class="cmd">https://git-scm.com/downloads</pre>
+
+<p>در تمام مراحل نصب فقط دکمه‌ی بعدی را بزن. برای اطمینان از نصب، در ترمینال بزن:</p>
+
+<pre class="cmd">git --version</pre>
+
+<p>اگر یک شماره‌ی نسخه نشان داد، نصب شده.</p>
+
+<ul class="checklist">
+  <li><label><input type="checkbox"><span>گیت نصب شد و شماره‌ی نسخه را دیدم</span></label></li>
+</ul>
+
+<h3>۲ — گرفتن فایل‌ها</h3>
+
+<p>ترمینال را باز کن و این دو دستور را یکی‌یکی بزن:</p>
+
+<pre class="cmd">cd Desktop</pre>
+
+<pre class="cmd">git clone https://github.com/Ehsan-aghapour/volleyball-bot-guide.git</pre>
+
+<p>
+حالا روی دسکتاپ یک پوشه‌ی تازه ساخته شده به این اسم:
+</p>
+
+<pre class="cmd">volleyball-bot-guide</pre>
+
+<div class="note">
+<p>
+اگر دستور جواب نداد یا وسط کار قطع شد، اول وی‌پی‌ان را چک کن و دوباره بزن.
+</p>
+</div>
+
+<ul class="checklist">
+  <li><label><input type="checkbox"><span>پوشه روی دسکتاپ ساخته شد</span></label></li>
+</ul>
+
+<h3>۳ — کپی کردن در پوشه‌ی پروژه</h3>
+
+<p>داخل پوشه‌ای که تازه گرفتی، یک پوشه هست به اسم:</p>
+
+<pre class="cmd">bot-starter</pre>
+
+<p>
+<b>محتویات</b> آن را در پوشه‌ی پروژه‌ات کپی کن — نه خود پوشه را، بلکه فایل‌های داخلش.
+اسم پوشه‌ی پروژه‌ات این است:
+</p>
+
+<pre class="cmd">volleyball-bot</pre>
+
+<ul class="checklist">
+  <li><label><input type="checkbox"><span>فایل‌ها در پوشه‌ی پروژه کپی شدند</span></label></li>
+</ul>
+
+<hr>
+
+<h2>هر وقت احسان گفت فایل‌ها به‌روز شده</h2>
+
+<p>ترمینال را باز کن و این دو دستور را بزن:</p>
+
+<pre class="cmd">cd Desktop/volleyball-bot-guide</pre>
+
+<pre class="cmd">git pull</pre>
+
+<p>تمام. اگر فایلی عوض شده باشد، حالا نسخه‌ی جدیدش را داری.</p>
+
+<div class="warn">
+<p>
+<b>قانون این پوشه:</b> هیچ‌وقت فایل‌های داخل
+<span dir="ltr">volleyball-bot-guide</span>
+را تغییر نده. این پوشه فقط برای گرفتن فایل است، نه برای کار کردن.
+کار تو در پوشه‌ی پروژه انجام می‌شود.
+</p>
+</div>
+
+<p>اگر دستور بالا خطا داد، این دو تا را پشت سر هم بزن:</p>
+
+<pre class="cmd">git reset --hard
+git pull</pre>
+
+<p>اگر باز هم خطا داد، به احسان بگو و برو سراغ کار بعدی.</p>
+
+<hr>
+
+<h2>دو پوشه‌ای که داری</h2>
+
+<div class="why"><span class="tag">پوشه‌ی پروژه — اینجا کار می‌کنی</span>
+<p>هر چیزی که می‌سازی اینجاست. کلود اینجا کد می‌نویسد.</p>
+<pre class="cmd">volleyball-bot</pre>
+</div>
+
+<div class="why"><span class="tag">پوشه‌ی فایل‌ها — فقط می‌گیری</span>
+<p>هیچ‌وقت دستش نمی‌زنی. فقط گاهی نسخه‌ی جدید می‌گیری.</p>
+<pre class="cmd">volleyball-bot-guide</pre>
+</div>
+
+<hr>
+
+<h2>حساب گیت‌هاب — برای بعد</h2>
+
+<p>
+برای گرفتن فایل‌ها حساب لازم نیست. ولی چند هفته‌ی دیگر که کدت را جایی امن
+نگه می‌داریم، لازم می‌شود. اگر همین حالا می‌خواهی درستش کنی، سه دقیقه طول می‌کشد:
+</p>
+
+<pre class="cmd">https://github.com/signup</pre>
+
+<ul class="checklist">
+  <li><label><input type="checkbox"><span>با ایمیل کاری‌ام ثبت‌نام کردم</span></label></li>
+  <li><label><input type="checkbox"><span>نام کاربری‌ام را برای احسان فرستادم</span></label></li>
+</ul>
+
+<div class="note">
+<p>
+نام کاربری‌ای انتخاب کن که بعداً هم به کارت بیاید. این اسم کنار هر کدی
+که می‌نویسی دیده می‌شود.
+</p>
+</div>
+
+<div class="nav">
+  <a href="index.html">صفحه‌ی اول<span class="sub">شرح پروژه و نحوه‌ی کار</span></a>
+  <a href="week1/week1.html">فهرست کارها<span class="sub">مرحله‌های تحویل</span></a>
+</div>
+
+<button class="reset">پاک کردن تیک‌های این صفحه</button>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
