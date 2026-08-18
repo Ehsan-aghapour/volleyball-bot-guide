@@ -2,7 +2,7 @@
 
 صفحه‌های این پروژه را از این آدرس باز کن:
 
-https://ehsan-aghapour.github.io/volleyball-bot-guide/
+https://ehsan-aghapour.github.io/work-guide/
 
 پوشه‌ی زیر باید داخل پوشه‌ی پروژه کپی شود:
 
